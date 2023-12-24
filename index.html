@@ -1,98 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Actor Portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    /* Basic styles */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
+    /* Custom styles for text and image animation */
+    @keyframes slideInLeft {
+      from {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
     }
 
-    header {
+    @keyframes slideInRight {
+      from {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    .actor-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    .actor-name {
+      animation: slideInLeft 1s ease-in-out;
+    }
+
+    .actor-image {
+      animation: slideInRight 1s ease-in-out;
+    }
+
+    .rounded-bg {
       background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
+      border-radius: 10px;
+      padding: 10px;
     }
 
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav ul li {
-      display: inline;
-      margin-right: 20px;
-    }
-
-    section {
-      padding: 50px 20px;
-      text-align: center;
-    }
-
-    /* Add more styles for sections, containers, images, etc. */
-
-    /* Media queries for responsiveness */
-    @media screen and (max-width: 768px) {
-      /* Styles for smaller screens */
+    .rounded-img {
+      border-radius: 50%;
+      max-width: 150px;
+      height: auto;
     }
   </style>
 </head>
+
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#videos">Videos</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <!-- Your header code here -->
   </header>
 
-  <section id="about">
-    <h2>About</h2>
-    <div class="container">
-      <!-- Actor's bio, details, and experiences -->
+  <!-- Actor Information -->
+  <div class="container">
+    <div class="actor-info">
+      <div class="actor-name">
+        <h1>Punit Shetty</h1>
+      </div>
+      <div class="actor-image">
+        <div class="rounded-bg">
+          <img src="path/to/your/image.png" alt="Punit Shetty" class="rounded-img">
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
 
-  <section id="experience">
-    <h2>Experience</h2>
-    <div class="container">
-      <!-- Detailed experience and achievements -->
-    </div>
-  </section>
-
-  <section id="videos">
-    <h2>Videos</h2>
-    <div class="container">
-      <!-- Embedded YouTube videos -->
-    </div>
-  </section>
-
-  <section id="gallery">
-    <h2>Gallery</h2>
-    <div class="container">
-      <!-- Photoshoot and event photos gallery -->
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="container">
-      <!-- Contact information, address, phone, WhatsApp button, social media links -->
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2023 Actor Portfolio</p>
-  </footer>
+  <!-- Bootstrap JS and jQuery (for Bootstrap functionality) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
