@@ -120,73 +120,142 @@
     .contact-details i {
       margin-right: 10px;
     }
+
+    .sticker {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      opacity: 0;
+      pointer-events: none;
+      animation: stickerBlast 2s linear;
+    }
+
+    @keyframes stickerBlast {
+      0% {
+        opacity: 1;
+        transform: scale(0);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(2);
+      }
+    }
+
+    .welcome-text {
+      position: absolute;
+      font-size: 36px;
+      opacity: 0;
+      animation: fadeIn 2s linear forwards, fadeOut 2s linear forwards 3s;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeOut {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0;
+      }
+    }
+
+    .content {
+      opacity: 0;
+      animation: fadeInContent 1.5s ease-in-out forwards 4s;
+    }
+
+    @keyframes fadeInContent {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
   </style>
 </head>
 <body>
-
-  <header>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#mywork">My Works</a>
-      <a href="#contact">Contact Us</a>
-    </nav>
-  </header>
-
-  <div id="home">
-    <div class="banner">
-      <img class="banner-image" src="Webp/banner-image.webp" alt="Banner Image">
-      <h1 class="fade-text">Punith Shetty</h1>
-    </div>
+  <div class="welcome-text">
+    Welcome to Punith Shetty's Website
   </div>
+
+  <div class="content">
+    <!-- Your website content goes here -->
+   
   
-  <div class="gallery-container">
-   <div class="background-image">
-      <!-- Background image -->
-      <img src="Punith Shetty 01.jpg" alt="Punith Shetty">
-      <h1 class="fade-text">Punith Shetty</h1>
+
+      <header>
+        <nav>
+          <a href="#home">Home</a>
+          <a href="#mywork">My Works</a>
+          <a href="#contact">Contact Us</a>
+        </nav>
+      </header>
+    
+      <div id="home">
+        <div class="banner">
+          <img class="banner-image" src="Webp/banner-image.webp" alt="Banner Image">
+          <h1 class="fade-text">Punith Shetty</h1>
+        </div>
+      </div>
       
-      
-    </div>
-    <div class="thumbnails">
-      <!-- Thumbnail images -->
-      <img src="50px x 50px/Punith Shetty 01.jpg" alt="Thumbnail 1" onclick="displayImage('Webp/Punith Shetty 01.webp')">
-      <img src="50px x 50px/Punith Shetty Serial.jpg" alt="Thumbnail 2" onclick="displayImage('Webp/Punith Shetty Serial.webp')">
-      <img src="50px x 50px/Punith Shetty With Girish Kasaravalli.jpg" alt="Thumbnail 2" onclick="displayImage('Webp/Punith Shetty With Girish Kasaravalli.webp')">
-      <img src="50px x 50px/Punith Shetty Photoshoot.jpg" alt="Thumbnail 2" onclick="displayImage('Webp/Punith Shetty Photoshoot.webp')">
-      <!-- Add more thumbnails as needed -->
-    </div>
-  </div>
-  <!-- WhatsApp Icon -->
-  <div class="whatsapp-icon" onclick="openWhatsApp()">
-    <img src="icons8-whatsapp-50 (1).png" alt="WhatsApp Icon">
-  </div>
-
-  <section class="contact-section" >
-    <div class="contact-container">
-
-      <div style="display: flex; justify-content: center; align-items: center;">
-        <!-- Instagram Embed Code -->
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/_shetty_punith/" data-instgrm-version="13"></blockquote>
-        <script async src="https://www.instagram.com/embed.js"></script>
+      <div class="gallery-container">
+       <div class="background-image">
+          <!-- Background image -->
+          <img src="Punith Shetty 01.jpg" alt="Punith Shetty">
+          <h1 class="fade-text">Punith Shetty</h1>
+          
+          
+        </div>
+        <div class="thumbnails">
+          <!-- Thumbnail images -->
+          <img src="50px x 50px/Punith Shetty 01.jpg" alt="Thumbnail 1" onclick="displayImage('Webp/Punith Shetty 01.webp')">
+          <img src="50px x 50px/Punith Shetty Serial.jpg" alt="Thumbnail 2" onclick="displayImage('Webp/Punith Shetty Serial.webp')">
+          <img src="50px x 50px/Punith Shetty With Girish Kasaravalli.jpg" alt="Thumbnail 2" onclick="displayImage('Webp/Punith Shetty With Girish Kasaravalli.webp')">
+          <img src="50px x 50px/Punith Shetty Photoshoot.jpg" alt="Thumbnail 2" onclick="displayImage('Webp/Punith Shetty Photoshoot.webp')">
+          <!-- Add more thumbnails as needed -->
+        </div>
       </div>
+      <!-- WhatsApp Icon -->
+      <div class="whatsapp-icon" onclick="openWhatsApp()">
+        <img src="icons8-whatsapp-50 (1).png" alt="WhatsApp Icon">
+      </div>
+    
+      <section class="contact-section" >
+        <div class="contact-container">
+    
+          <div style="display: flex; justify-content: center; align-items: center;">
+            <!-- Instagram Embed Code -->
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/_shetty_punith/" data-instgrm-version="13"></blockquote>
+            <script async src="https://www.instagram.com/embed.js"></script>
+          </div>
+        </div>
+      </section>
+    
+      <section class="contact-section" id="contact">
+        <div class="contact-container">
+          <h2 class="contact-heading">Contact Us</h2>
+          <div class="contact-details">
+            <i class="fas fa-phone"></i> Phone: <a href="tel:+918095273327">+918095273327</a>
+          </div>
+          <div class="contact-details">
+            <i class="far fa-envelope"></i> Email: <a href="mailto:actorpunithshetty@gmail.com">actorpunithshetty@gmail.com</a>
+          </div>
+          <div class="contact-details">
+            <i class="fas fa-home"></i> Address: Adugudi, Bangalore, India
+          </div>
+          <!-- You can add more contact details as needed -->
+        </div>
+      </section>
     </div>
-  </section>
-
-  <section class="contact-section" id="contact">
-    <div class="contact-container">
-      <h2 class="contact-heading">Contact Us</h2>
-      <div class="contact-details">
-        <i class="fas fa-phone"></i> Phone: <a href="tel:+918095273327">+918095273327</a>
-      </div>
-      <div class="contact-details">
-        <i class="far fa-envelope"></i> Email: <a href="mailto:actorpunithshetty@gmail.com">actorpunithshetty@gmail.com</a>
-      </div>
-      <div class="contact-details">
-        <i class="fas fa-home"></i> Address: Adugudi, Bangalore, India
-      </div>
-      <!-- You can add more contact details as needed -->
-    </div>
-  </section>
 
   <script>
     // JavaScript for fading text on page load
@@ -212,6 +281,19 @@
       // Open the WhatsApp chat or app
       window.location.href = whatsappLink;
     }
+
+    const colors = ['#FF6633', '#FFB399', '#FF33FF', '#FFFF99', '#00B3E6', '#E6B333', '#3366E6', '#999966'];
+    const stickers = 50;
+    const body = document.querySelector('body');
+
+    for (let i = 0; i < stickers; i++) {
+      const sticker = document.createElement('div');
+      sticker.classList.add('sticker');
+      sticker.style.background = colors[Math.floor(Math.random() * colors.length)];
+      sticker.style.left = `${Math.random() * 100}vw`;
+      sticker.style.top = `${Math.random() * 100}vh`;
+      body.appendChild(sticker);
+    }    
 
 
   </script>
