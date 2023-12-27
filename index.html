@@ -308,7 +308,15 @@
       sticker.style.left = `${Math.random() * 100}vw`;
       sticker.style.top = `${Math.random() * 100}vh`;
       body.appendChild(sticker);
-    }    
+    } 
+
+    window.onload = function() {
+      setTimeout(function() {
+        const textElement = document.querySelector('.fade-text');
+        textElement.style.opacity = '1'; // Change opacity to fully visible
+      }, 6000); // 6000 milliseconds = 6 seconds
+    };
+
 
 
   </script>
