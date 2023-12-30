@@ -194,6 +194,25 @@
         opacity: 1;
       }
     }
+
+    .video-container {
+      max-width: 100%; /* Ensure the video container spans the full width */
+      margin: 0 auto; /* Center the container horizontally */
+      padding: 0 20px; /* Add padding for better mobile display */
+    }
+    
+    .video-container iframe {
+      width: 100%; /* Set the video width to 100% for responsiveness */
+      height: 400px; /* Set the initial height for desktop */
+    }
+    
+    @media (max-width: 768px) {
+      /* Media query for mobile devices (adjust breakpoint as needed) */
+      .video-container iframe {
+        height: 250px; /* Set a smaller height for better display on mobile */
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -228,6 +247,13 @@
             <!-- Embedding YouTube video -->
             <iframe width="100%" height="400" src="https://www.youtube.com/embed/VFWM6Ny2fIE" frameborder="0" allowfullscreen></iframe>
          
+        </div>
+      </section>
+      <section class="video-section">
+        <div class="video-container">
+          <h2 class="video-heading">Featured Video</h2>
+          <!-- Embedding YouTube video -->
+          <iframe width="100%"  src="https://www.youtube.com/embed/VFWM6Ny2fIE" frameborder="0" allowfullscreen></iframe>
         </div>
       </section>
       
